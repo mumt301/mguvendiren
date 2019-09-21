@@ -1,0 +1,102 @@
+body {
+    font-family: Helvetica;
+    background-color: #8b698b;
+    color: rgb(77, 43, 105);
+    line-height: 55px;
+}
+
+.bio {
+    font-size: 120px;
+}
+
+.bio2 {
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+.bio2 >span{
+    font-size: 80px;
+    font-family: sans-serif;
+    font-style: italic
+}
+
+h1 {
+    font-size: 120px;
+    color: #31123a;
+}
+
+h2 {
+    font-size: 120px;
+    color: #31123a;
+}
+
+h3 {
+    font-size: 120px;
+    color: #31123a;
+}
+
+#highlight1 {
+    color: #ffffff;
+}
+
+#highlight2 {
+    color: #780ef1;
+}
+
+#highlight3 {
+    color: #31123a;
+}
+
+#highlight4 {
+    color: #ffffff;
+}
+
+#highlight5 {
+    color: #780ef1;
+}
+
+#highlight6 {
+    color: #ffffff;
+}
+
+#highlight7 {
+    color: #31123a;
+}
+
+img {
+    width: 100%;
+    opacity: 0.20;
+    position: absolute;
+    left: 5px;
+    top: 0%;
+}
+
+ul li {
+    font-size: 100px;
+    list-style-type: none;
+    color: #ffffff;
+}
+
+.links {
+    font-size: 40px;
+    font-family: Helvetica;
+    font-style: italic
+}
+
+.link {
+    font-size: 40px;
+    font-family: Helvetica;
+    font-style: italic;
+}
+
+.home {
+    font-size: 40px;
+    font-family: Helvetica;
+    font-style: italic;
+}
+
+.assignment {
+    font-size: 40px;
+    font-family: Helvetica;
+    font-style: italic;
+}
