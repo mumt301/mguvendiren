@@ -1,0 +1,96 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MUMT301-2019 Assignment 1\
+QUESTIONNAIRE!\
+\
+The following questionnaire seeks to understand your previous knowledge about some of the concepts that we will learn in class during the coming term.\
+\
+\
+1. Do you know any programming languages? If you do, which ones?\
+Yes, Max.\
+\
+2. What is your primary computer operating system?\
+IOS.\
+\
+3. Do you own a smartphone, table, or mobile device? If you do, what model and OS?\
+I own an iPhone 8 IOS 12.3.1.\
+\
+4. Do you use any social networking services? If you do, which ones? Why?\
+I use LinkedIn (to connect with business professionals in my field), Instagram (to build relationships\
+with art blogs with mine)\
+\
+5. Expand the following acronyms and do research about their meaning. You may look them up if you don't know:\
+\
+	HTTP : Hypertext Transfer Protocol\
+It is a protocol request between web clients usually being browsers and servers being computers in the cloud.\
+\
+	REST : Representational State Tranfer\
+It is an architectural style making systems on the web communicate more efficiently with each other without\
+necessarily knowing what state the client is in.\
+	\
+        API  : Application program interface\
+Used mainly as protocols that access the tools in order to build software applications. \
+\
+6. Do you play a musical instrument or sing? If so, how proficient are you?\
+I am a pianist (advanced), a beginner bass guitar player, and a beginner ukulele player.\
+\
+7. Can you read music notation? If so, how well?\
+Yes, I can read music notation, however face difficulties sometimes due to the lack of practice.\
+\
+8. How large is your personal music collection? Estimate the number of artists, albums, and songs. If instead you listen to music using streaming services, how many playlists, artists, albums,\
+and songs do you have in your account?\
+I use Spotify as my streaming service on top of my personal vinyl/cd/cassette/digital files. In my Spotify account there are around 18 playlists, around 500 artists, 600 albums, and around\
+5000 songs. In my personal collection, I have around 50 artists, 52 albums, and around 1000 songs.    \
+\
+9. How do you search and find new music?\
+Usually through word of mouth, but mostly through the "discover" option in Spotify.\
+\
+10. Implement a script in your favorite programming language that takes numbers as its input until it receives the command "done." When it reads "done," print out the average of all the numbers\
+that were input.\
+\
+If you don't know a programming language, write out all the steps you would need to accomplish the same task.\
+\
+Example: if we were writing a piece of software that took ingredients of a recipe and then, when it received the word "end" it printed the ingredients out, our steps might look like this:\
+\
+	1. Input ingredients\
+	2. If input is not "end" add the ingredient to the ingredient list\
+	3. Go to step 1.\
+	4. If input is "end" print each ingredient in the ingredient list,\
+	5. Exit.\
+\
+1. Input numbers. \
+2. If input is not "done" add the number to the number list.\
+3. Go to step 1.\
+4. If input is "done" print average of all the numbers in the numbers list. \
+5. Exit. \
+\
+11. What is Git?\
+Git is a tool used as a control system to manage the source code history.\
+\
+12. What is Github? Do you have an account? If you do not, create one and provide your username.\
+GitHub is the hosting service on the web that provides web-based interface for Git repositories.\
+\
+13. List all the musical shows that you are planning to attend in the next few weeks. Do provide links to them.\
+All Day I Dream x Piknic Electronic:  https://www.bandsintown.com/e/101361205\
+Boiler Room x Piknic Electronik:  https://piknicelectronik.com/montreal/en/performance/2019/boiler-room-x-piknic-electronik-montreal/ \
+\
+14. In your opinion, what are the two most interesting upcoming musical artists?\
+Vulfpeck and Noah Slee.\
+\
+To deliver the questionnaire you will:\
+\
+	1. Create another folder named www inside your home directory in the server\
+	2. Move the file questionnaire.txt to the www folder you just made\
+	3. Rename the file questionnaire.txt to assignment1.txt\
+	4. If you did everything correctly, you should be able to see the file in a web browser by typing its URL\
+	http://132.206.14.130/yourusername/assignment1.txt\
+\
+And can also be found here: {\field{\*\fldinst{HYPERLINK "http://132.206.14.130/mguvendiren/assignment1.txt"}}{\fldrslt 
+\f1 \cf3 \ul \ulc3 \strokec3 http://132.206.14.130/mguvendiren/assignment1.txt}}}
