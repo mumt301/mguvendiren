@@ -1,0 +1,198 @@
+#nav{
+    display: block;
+}
+#nav div {
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+    margin: 3%;
+}
+
+#nav div > a {
+    color: #ffffff;
+    text-decoration:none;
+}
+#nav ul {
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-size: 12px;
+    font-style: italic;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 0 0.4em #215684;
+}
+
+#nav ul li {
+    display: inline;
+    margin: 5px;
+}
+
+#nav ul li a{
+    color: #ffffff;
+}
+
+#bodyBackgroundHome {
+    background: url(./photos/home.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+#bodyBackgroundBiography {
+    background: url(./photos/biography.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+#bodyBackgroundDiscography {
+    background: url(./photos/discography.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+#bodyBackgroundVideos{
+    background: url(./photos/videos.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+#bodyBackgroundMusic{
+    background: url(./photos/music.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+.biographyContainer{
+    vertical-align: top;
+    text-align: justify;
+    background-color: rgba(33, 136, 90, 0.3);
+    width: 30%;
+    margin: auto;
+    margin-top: 3%;
+    color: #ffffff;
+    overflow-y: scroll;
+    position: relative;
+    height: 50%;
+    font-family: Gill Sans;
+}
+.videosContainer{
+    vertical-align: top;
+    text-align: justify;
+    width: 40%;
+    margin: auto;
+    margin-top: 3%;
+    color: #ffffff;
+    font-family: Gill Sans; 
+}
+.musicContainer{
+    vertical-align: top;
+    text-align: justify;
+    width: 23%;
+    margin: auto;
+    margin-top: 3%;
+    color: #ffffff;
+    font-family: Sans-serif; 
+}
+.discographyContainer{
+    vertical-align: top;
+    text-align: justify;
+    width: 50%;
+    margin: auto;
+    margin-top: 3%;
+    color: #ffffff;
+    font-family: Sans-serif; 
+}
+
+.discographyFirstContainer{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.discographySecondContainer{
+    justify-content: space-between;
+    display: flex;
+}
+.discographyFirstContainer > div >a{
+    display: grid;
+    text-align: center;
+}
+.discographySecondContainer >div >a{
+    display: grid;
+    text-align: center;
+}
+.discographyFirstContainer > div > a> img{
+    width: 160px;
+    height: 160px;
+}
+.discographySecondContainer >div> a> img{ 
+    width: 160px;
+    height: 160px;
+}
+.videosContainer > iframe, .musicContainer>iframe{
+    width: 100% ;
+    height: 300px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .discographyFirstContainer{
+        display: unset;
+        margin: auto;
+        width: 20%;
+       
+    }
+    .discographySecondContainer{
+        display: unset;
+        margin: auto;
+        width: 20%;
+    }
+    .discographyContainer{
+        width: 20%;
+    }
+    .videosContainer{
+        width: 50%
+    }
+    .musicContainer{
+        width: 32%
+    }
+    .biographyContainer{
+        width: 35%;
+        height: 55%;
+    }
+  }
+  @media only screen and (max-width: 750px) {
+    .discographyContainer{
+        width: 25%;
+    }
+    .videosContainer{
+        width: 60%
+    }
+    .musicContainer{
+        width: 40%
+    }
+    .biographyContainer{
+        width: 40%;
+        height: 60%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .discographyContainer{
+        width: 29%;
+    }
+    .videosContainer{
+        width: 70%
+    }
+    .musicContainer{
+        width: 49%
+    }
+    .biographyContainer{
+        width: 45%;
+        height: 65%; 
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .discographyContainer{
+        width: 35%;
+    }
+    .videosContainer{
+        width: 80%
+    }
+    .musicContainer{
+        width: 60%
+    }
+    .biographyContainer{
+        width: 50%;
+        height: 70%;
+    }
+  }
