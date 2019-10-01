@@ -1,0 +1,11 @@
+.headerTitle{
+    font-size: 35px;
+}
+.columns{
+    flex-basis: 10% !important;
+    border: 1px solid black;
+}
+.columnKeys{
+    font-weight: bold;
+    flex-basis: 10% !important;
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class 4 | JavaScript 101</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" href="https://minicss.org/flavorFiles/mini-default.css">
+    <!-- <link rel="stylesheet" href="https://minicss.org/flavorFiles/mini-dark.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  </head>
+
+  <body onload=discography()>
+    <header class="sticky headerTitle">
+        Assignment 4
+    </header>       
+    <h2 style="text-align: center">Comparison of Compression Algorithms</h2>
+      <div id="discography_table"></div>
+
+        <script>
+        var compressionAlgorithms = [{
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'MP3',
+                'Bit-rate': "96kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome96.mp3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'MP3',
+                'Bit-rate': "128kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome128.mp3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'MP3',
+                'Bit-rate': "192kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome192.mp3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'MP3',
+                'Bit-rate': "320kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome320.mp3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'OGG',
+                'Bit-rate': "96kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome96.ogg',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'OGG',
+                'Bit-rate': "128kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome128.ogg',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'OGG',
+                'Bit-rate': "192kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome192.ogg',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'OGG',
+                'Bit-rate': "320kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome320.ogg',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'AC3',
+                'Bit-rate': "96kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome96.ac3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'AC3',
+                'Bit-rate': "128kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome128.ac3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'AC3',
+                'Bit-rate': "192kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome192.ac3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'AC3',
+                'Bit-rate': "320kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome320.ac3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'M4A',
+                'Bit-rate': "96kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome96.m4a',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'M4A',
+                'Bit-rate': "128kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome128.m4a',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'M4A',
+                'Bit-rate': "192kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome192.m4a',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Make It To Me',
+                'Compression algorithm': 'M4A',
+                'Bit-rate': "320kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'makeittome.wav',
+                'Link to compressed audio' : 'makeittome320.m4a',
+                'Link to residual audio' : 'Residual audio'
+            },{
+                'File Name': 'Spoons',
+                'Compression algorithm': 'MP3',
+                'Bit-rate': "96kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons96.mp3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'MP3',
+                'Bit-rate': "128kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons128.mp3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'MP3',
+                'Bit-rate': "192kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons192.mp3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'MP3',
+                'Bit-rate': "320kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons320.mp3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'OGG',
+                'Bit-rate': "96kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons96.ogg',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'OGG',
+                'Bit-rate': "128kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons128.ogg',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'OGG',
+                'Bit-rate': "192kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons192.ogg',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'OGG',
+                'Bit-rate': "320kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons320.ogg',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'AC3',
+                'Bit-rate': "96kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons96.ac3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'AC3',
+                'Bit-rate': "128kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons128.ac3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'AC3',
+                'Bit-rate': "192kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons192.ac3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'AC3',
+                'Bit-rate': "320kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons320.ac3',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'M4A',
+                'Bit-rate': "96kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons96.m4a',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'M4A',
+                'Bit-rate': "128kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons128.m4a',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'M4A',
+                'Bit-rate': "192kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons192.m4a',
+                'Link to residual audio' : 'Residual audio'
+            }, {
+                'File Name': 'Spoons',
+                'Compression algorithm': 'M4A',
+                'Bit-rate': "320kbps",
+                'Original size': '1000',
+                'Compressed size': '100',
+                'Compression ratio': '0.1',
+                'Link to original audio': 'spoons.wav',
+                'Link to compressed audio' : 'spoons320.m4a',
+                'Link to residual audio' : 'Residual audio'
+            }
+            ];
+        
+            function discography() {
+              container = document.createElement('div');
+              container.className = 'container';
+              row = document.createElement('div');
+              row.className = 'row';
+              Object.keys(compressionAlgorithms[0]).map(data=>{
+                        col = document.createElement('div');
+                        col.className = 'col-sm-12 col-md-3 col-lg-3 columns columnKeys';
+                        col.innerHTML = data;
+                        row.appendChild(col); 
+                    });
+                    container.appendChild(row);
+              for ( r = 0; r < compressionAlgorithms.length; r++ ) {
+                column_keys = Object.keys(compressionAlgorithms[r]);
+                row = document.createElement('div');
+                row.className = 'row';
+                // Iterate over the columns
+                for (c = 0; c < Object.keys(column_keys).length; c++) {
+                  // If it is the last column, treat it like an image link
+                  if (c == 6) {
+                    var a = document.createElement('a');
+                    var linkText = document.createTextNode("Original Audio");
+                    a.href = "./songs/"+compressionAlgorithms[r][column_keys[c]];
+                    a.className = 'col-sm-12 col-md-3 col-lg-3 columns';
+                    a.appendChild(linkText);
+                    row.appendChild(a);
+                  }else if(c==7){
+                    var a = document.createElement('a');
+                    var linkText = document.createTextNode("Compressed audio");
+                    a.href = "./songs/"+compressionAlgorithms[r][column_keys[c]];
+                    a.className = 'col-sm-12 col-md-3 col-lg-3 columns';
+                    a.appendChild(linkText);
+                    row.appendChild(a);
+
+                  } else {
+                    col = document.createElement('div');
+                    col.className = 'col-sm-12 col-md-3 col-lg-3 columns';
+                    col.innerHTML = compressionAlgorithms[r][column_keys[c]];
+                    row.appendChild(col);  
+                  }
+                }
+                container.appendChild(row);
+              }
+              
+              document.getElementById("discography_table").appendChild(container);
+            }
+        </script>
+
+    <footer class="sticky">
+      <div class="container" style="text-align: center">
+        <a href="../../index.html">Back to Home</a>
+      </div>
+    </footer>
+            
+	</body>
+</html>
