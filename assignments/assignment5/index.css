@@ -1,0 +1,104 @@
+#nav{
+    display: block;
+}
+#nav div {
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+    margin: 3%;
+}
+
+#nav div > a {
+    color: #ffffff;
+    text-decoration:none;
+}
+#nav ul {
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-size: 12px;
+    font-style: italic;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 0 0.4em #215684;
+}
+
+#nav ul li {
+    display: inline;
+    margin: 5px;
+}
+
+#nav ul li a{
+    color: #ffffff;
+}
+#bodyBackgroundHome {
+    background: url(./background/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+#bodyBackgroundSpotify {
+    background: url(./background/spotify.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+#bodyBackgroundChoon {
+    background: url(./background/choon.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    margin-top: 3%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: black;
+}
+.photoContainer{
+    width: 32%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.photoContainer > img{
+    padding: 2%;
+    margin-bottom: 2%;
+    max-width: 100%;
+}
+.textContainer{
+    width: 65%;
+    color: #ffffff;
+    font-size: 40px;
+}

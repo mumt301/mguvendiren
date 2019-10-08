@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+
+    <body>
+        <form id="userdata">
+            <h2>Name</h2>
+            <input type="text" name="Username">
+            <h2>Artist</h2>
+            <input type="text" name="Artist">
+            <input type="button" value="Submit" onclick=queryData()>
+        </form>
+        <!-- Create a placeholder -->
+        <h1 id="message"></h1> 
+        <script>
+            function queryData() {
+                x = document.getElementById("userdata");
+                userName = x.elements["Username"].value;
+                artistName = x.elements["Artist"].value;
+                m = document.getElementById("message");
+                m.innerHTML = "Hello" + userName + ", you are interested in " + artistName;
+                console.log(x);
+            }
+        </script> 
+    </body>
+</html>

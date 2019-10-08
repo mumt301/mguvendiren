@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>MUSIC STREAMING</title>
+        <link rel="stylesheet" type="text/css" href="./index.css">
+    </head>
+    <body id="bodyBackgroundChoon">
+        <div id="nav">
+                <div><a href="./index.html">MUSIC STREAMING</a></div>
+            <ul class="nav">
+                <li><a href="./spotify.html">Spotify</a></li>
+                <li><a href="./choon.html">Choon</a></li>
+            </ul>
+        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Usability')">Usability</button>
+            <button class="tablinks" onclick="openCity(event, 'Pricing')">Pricing</button>
+            <button class="tablinks" onclick="openCity(event, 'Audio Streaming')">Audio Streaming</button>
+            <button class="tablinks" onclick="openCity(event, 'Corpus')">Corpus</button>
+            <button class="tablinks" onclick="openCity(event, 'Recommendations')">Recommendations</button>
+            <button class="tablinks" onclick="openCity(event, 'Playlist Generation')">Playlist Generation</button>
+        </div>
+        <div id="Usability" class="tabcontent">
+            <div class="photoContainer">
+                <img src="./choon/usability/17.png" alt="Usability">
+                <img src="./choon/usability/18.png" alt="Usability">
+            </div>
+            <div class="textContainer">
+                <ul>
+                    <li>Use of blockchain and smart contracts to create fair distribution of streaming revenues to artists and their collaborators.</li>
+                    <li>Cryptocurrency</li>
+                    <li>Removing middlemen and intermediaries to allow direct listener-to-artist relationships</li></br>
+                    <li>source: <br> https://www.choon.co/public/pdf/choon_white_paper.pdf</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="Pricing" class="tabcontent">
+            <div class="photoContainer">
+                <img src="./choon/pricing/19.jpg" alt="Pricing">
+            </div>
+            <div class="textContainer">
+                <ul>
+                    <li>Free to use</li>
+                    <li>But will introduce a number of subscription packages</li>
+                    <li>Choon retains 20% (after any costs, such as credit-card processing) and returns 80% of the gross amount to artists.</li></br>
+                    <li>source: https://www.choon.co/public/pdf/choon_white_paper.pdf</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="Audio Streaming" class="tabcontent">
+            <div class="photoContainer">
+                <img src="./choon/audio-streaming/20.png" alt="Audio Streaming">
+            </div>
+            <div class="textContainer">
+                <ul>
+                    <li>Choon downsamples your audio to 192kbps MP3</li></br>
+                    <li>source: https://choontrance.com/choon-faq/</li>
+                </ul>
+            </div>
+        </div>
+        <div id="Corpus" class="tabcontent">
+            <div class="photoContainer">
+                <img src="./choon/corpus/21.jpg" alt="Corpus">
+            </div>
+            <div class="textContainer">
+                <ul>
+                    <li>Sensitive content on blockchain</li>
+                    <li>Scans each track through Gracenote - centralized</li></br>
+                    <li>source: https://www.forbes.com/sites/andrewrossow/2018/03/03/international-music-dj-gareth-emery-brings-blockchain-project-to-music-industry/#7398ba5e5479</li>
+                </ul>
+            </div>
+        </div>
+        <div id="Recommendations" class="tabcontent">
+            <div class="photoContainer">
+                <img src="./choon/recommendations/22.jpg" alt="Recommendations">
+                <img src="./choon/recommendations/23.jpg" alt="Recommendations">
+            </div>
+            <div class="textContainer">
+                <ul>
+                    <li>Traditional Marketing, Partnership Deals.</li>
+                    <li>Digital Marketing, Increased Features</li></br>
+                    <li>source: https://www.choon.co/public/pdf/choon_white_paper.pdf</li>
+                </ul>
+            </div>
+        </div>
+        <div id="Playlist Generation" class="tabcontent">
+            <div class="photoContainer">
+                <img src="./choon/playlist-generation/24.jpg" alt="Playlist Generation">
+            </div>
+            <div class="textContainer">
+                <ul>
+                    <li>Playlist split only accounts for the plays in a playlist. If someone clicks through to your page and plays the track there, you don't have to pay the split</li><br>
+                    <li>source: https://choontrance.com/choon-faq/ </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "flex";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+    </body>
+</html>
