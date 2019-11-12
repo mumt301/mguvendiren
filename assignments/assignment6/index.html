@@ -1,0 +1,117 @@
+<html>
+    <head>
+         <link rel="stylesheet" type="text/css" href="./index.css">
+    </head>
+<body> 
+	<h1 id="title">MusicBrainz APIs</h1>
+	<div id="container">
+		<h2>Assignment 6</h2>
+		<p>The artist name will be used to call the MusicBrainz API for retrieving the album discography from the MusicBrainz database.</p>
+        
+        <div>
+            <h2>Basic call to the MusicBrainz API</h2>
+            <p>Retrieve album for a given user-entered artist</p>
+    
+            <form id="artist"> Artist name?
+                <input type="text" name="artist">
+                <input type="button" onclick="artistMBIDRetriever()" value="Retrieve releases!">
+            </form>
+        </div>
+    
+    
+        <div id="artistOutput"></div>
+    
+        <script>
+            function httpGet(theUrl) {
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open("GET", theUrl, false);
+                xmlHttp.send();
+                return xmlHttp.responseXML;
+            }
+    
+            function artistMBIDRetriever() {
+                // Retrieve the data from the form
+                artistName = document.getElementById("artist")
+                artistnameForm = document.getElementById("artist");
+                artistName = artistnameForm.elements["artist"].value;
+    
+                // Create the MB call
+                mbBaseURL = "https://musicbrainz.org/ws/2/";
+                mbResource = "artist?query=";
+                queryURL = mbBaseURL + mbResource + artistName;
+                // console.log(queryURL);
+                retrievedData = httpGet(queryURL);
+                console.log(retrievedData)
+    
+                // Parse the response from MB
+                artistData = retrievedData.getElementsByTagName("artist")[0];
+                artistMBID = artistData.id;
+                // console.log(artistMBID);
+                artistDocument = retrievedData.getElementById(artistMBID);
+                artistName = artistDocument.getElementsByTagName("name")[0].innerHTML;
+                // console.log(artistDocument)
+
+                // Create the Album call
+                mbBaseURL = "https://musicbrainz.org/ws/2/";
+                mbResource = "release-group?artist=";
+                queryURL = mbBaseURL + mbResource + artistMBID;
+                // console.log(queryURL);
+                retrievedData = httpGet(queryURL);
+                console.log(retrievedData)
+
+                // Parse the response from Album 
+                albumData = retrievedData.getElementsByTagName("release-group");
+
+                var body = document.getElementsByTagName("body")[0];
+                var mytable = document.createElement("table");
+                var mytablemain = document.createElement("tbody");
+                var row = document.createElement("tr")
+
+                var cell1 = document.createElement("td");
+                var cellText1 = document.createTextNode("Album");
+                cell1.appendChild(cellText1);
+                row.appendChild(cell1);
+
+                var cell2 = document.createElement("td");
+                var cellText2 = document.createTextNode("First Release Date");
+                cell2.appendChild(cellText2);
+                row.appendChild(cell2);
+                mytablemain.appendChild(row);
+
+                for (var i = 0; i < albumData.length; i++) {
+                    var row = document.createElement("tr");
+                    albumDocument = albumData[i]
+                    albumTitle = albumDocument.getElementsByTagName("title")[0].innerHTML;
+                    albumDate = albumDocument.getElementsByTagName("first-release-date")[0].innerHTML;
+
+                    var cell1 = document.createElement("td");
+                    var cellText1 = document.createTextNode(albumTitle);
+                    cell1.appendChild(cellText1);
+                    row.appendChild(cell1);
+
+                    var cell2 = document.createElement("td");
+                    var cellText2 = document.createTextNode(albumDate);
+                    cell2.appendChild(cellText2);
+                    row.appendChild(cell2);
+
+                    mytablemain.appendChild(row);
+                }
+                mytable.appendChild(mytablemain);
+                body.appendChild(mytable);
+                mytable.setAttribute("border", "2");
+            }
+    
+        </script>
+        
+
+
+    <footer class="sticky">
+         <div class="container" style="text-align: center">
+             <a href="../../index.html">Back to Home</a>
+        </div>
+     </footer>
+
+    </div>
+</body>
+</html>
+
